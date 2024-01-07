@@ -69,7 +69,7 @@ public:
 			{
 				if (command[i] == ' ')
 				{
-					write_command = false;
+					write_mod = false;
 				}
 				else
 				{
@@ -82,7 +82,7 @@ public:
 			}
 			if (write_text)
 			{
-				if (command[i] == '"')
+				if (command[i] == '`')
 				{
 					count++;
 				}
