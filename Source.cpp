@@ -76,7 +76,7 @@ public:
 					this->mod += command[i];
 				}
 			}
-			if (!write_text && command[i] == '"')
+			if (!write_text && command[i] == '`')
 			{
 				write_text = true;
 			}
