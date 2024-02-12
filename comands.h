@@ -1,9 +1,11 @@
 #pragma once
+#ifndef _COMANDS_H_
+#define _COMANDS_H_
 #include <iostream>
 #include <string>
 #include "interface.h"
 using namespace std;
-class statistics
+class statistics 
 {
 public:
 	statistics();
@@ -29,7 +31,8 @@ protected:
 	string language;
 private:
 };
-class all_command :public stabilization_command,
+class all_command :
+	public stabilization_command,
 	public initialization_command,
 	public execute_command,
 	public info_command,
@@ -39,3 +42,4 @@ class all_command :public stabilization_command,
 public:
 private:
 };
+#endif // !_COMANDS_H_

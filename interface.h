@@ -1,4 +1,6 @@
 #pragma once
+#ifndef _INTERFACE_H_
+#define _INTERFACE_H_
 #include <string>
 using namespace std;
 class stabilization_command
@@ -22,3 +24,11 @@ public:
 	virtual void execute() = 0;
 private:
 };
+class start_programm
+{
+public:
+	virtual void check_files() = 0;
+protected:
+	bool have_file;
+};
+#endif // !_INTERFACE_H_

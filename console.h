@@ -1,9 +1,10 @@
 #pragma once
+#ifndef _CONSOLE_H_
+#define _CONSOLE_H_
 #include <string>
 #include <iostream>
 #include "comands.h"
 #include "interface.h"
-
 class console : public all_command
 {
 public:
@@ -12,3 +13,5 @@ public:
 	void execute() override;
 private:
 };
+#endif // !_CONSOLE_H_
+
