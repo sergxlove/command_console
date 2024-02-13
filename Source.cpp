@@ -9,8 +9,8 @@ int main()
 	console comms;
 	while (command != "exit")
 	{
-		cout << endl;
 		cout << "User >> ";
+		cout << endl;
 		getline(cin, command);
 		command = comms.stabilization(command);
 		comms.initialization(command);
