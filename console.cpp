@@ -101,4 +101,8 @@ void console::execute()
 	{
 		print_statistics();
 	}
+	else if (comm == "calc")
+	{
+		calculate();
+	}
 }
