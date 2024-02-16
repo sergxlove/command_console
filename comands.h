@@ -7,6 +7,7 @@
 #include <stack>
 #include "interface.h"
 #include "enums.h"
+#include "file_system.h"
 using namespace std;
 class statistics 
 {
@@ -58,7 +59,8 @@ class all_command :
 	public info_command,
 	public setting_comand,
 	public statistics,
-	public calculate_comand
+	public calculate_comand,
+	public file_sys
 {
 public:
 private:

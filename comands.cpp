@@ -14,6 +14,23 @@ void statistics::print_statistics()
 	cout << "Количество ошибочных команд - \t\t" << this->quantyti_error_command << endl;
 }
 
+void statistics::read_statistics()
+{
+	fstream file;
+	string str;
+	file.open("data\\stat.txt", fstream::in);
+	if (file.is_open())
+	{
+		getline(file, str);
+		this->quantyti_command = stoi(str);
+		getline(file, str);
+		this->quantyti_done_command = stoi(str);
+		getline(file, str);
+		this->quantyti_error_command = stoi(str);
+		file.close();
+	}
+}
+
 void info_command::version()
 {
 	cout << "developer sergxlove, 2024" << endl;

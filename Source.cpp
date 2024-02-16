@@ -7,6 +7,7 @@ int main()
 	setlocale(LC_ALL, "rus");
 	string command;
 	console comms;
+	comms.starts();
 	while (command != "exit")
 	{
 		cout << endl;
