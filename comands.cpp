@@ -31,6 +31,11 @@ void statistics::read_statistics()
 	}
 }
 
+void statistics::write_statistics()
+{
+	fstream file;
+}
+
 void info_command::version()
 {
 	cout << "developer sergxlove, 2024" << endl;

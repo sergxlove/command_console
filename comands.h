@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <stack>
+#include <fstream>
 #include "interface.h"
 #include "enums.h"
 #include "file_system.h"
@@ -14,6 +15,8 @@ class statistics
 public:
 	statistics();
 	void print_statistics();
+	void read_statistics();
+	void write_statistics();
 protected:
 	int quantyti_command;
 	int quantyti_done_command;
