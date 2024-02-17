@@ -2,6 +2,7 @@
 #ifndef _INTERFACE_H_
 #define _INTERFACE_H_
 #include <string>
+#include <vector>
 using namespace std;
 class stabilization_command
 {
@@ -14,9 +15,7 @@ class initialization_command
 public:
 	virtual void initialization(const string& command) = 0;
 protected:
-	string comm;
-	string mod;
-	string text;
+	vector<string> com;
 };
 class execute_command
 {

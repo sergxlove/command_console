@@ -34,6 +34,15 @@ void statistics::read_statistics()
 void statistics::write_statistics()
 {
 	fstream file;
+	file.open("data\\stat.txt", fstream::out);
+	if (file.is_open())
+	{
+		file.clear();
+		file << this->quantyti_command << endl;
+		file << this->quantyti_done_command << endl;
+		file << this->quantyti_error_command << endl;
+		file.close();
+	}
 }
 
 void info_command::version()
@@ -57,6 +66,34 @@ void setting_comand::setting()
 	cout << "Настройки пользователя: " << endl;
 	cout << "Имя - \t\t" << name << endl;
 	cout << "Язык - \t\t" << language << endl;
+}
+
+void setting_comand::read_setting()
+{
+	fstream file;
+	string str;
+	file.open("data\\setting.txt", fstream::in);
+	if (file.is_open())
+	{
+		getline(file, str);
+		this->language = stoi(str);
+		getline(file, str);
+		this->name = stoi(str);
+		file.close();
+	}
+}
+
+void setting_comand::write_setting()
+{
+	fstream file;
+	file.open("data\\setting.txt", fstream::out);
+	if (file.is_open())
+	{
+		file.clear();
+		file << this->language << endl;
+		file << this->language << endl;
+		file.close();
+	}
 }
 
 void calculate_comand::calculate()
