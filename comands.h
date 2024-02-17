@@ -33,6 +33,8 @@ class setting_comand
 {
 public:
 	void setting();
+	void read_setting();
+	void write_setting();
 protected:
 	string name;
 	string language;
